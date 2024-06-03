@@ -1,0 +1,6 @@
+
+1. home route => add html page
+2. connect to DB
+3. user login, signup
+4. APIs for => all notes, add notes, delete notes, update notes, fetch notes by id
+
