@@ -14,6 +14,11 @@ const addNotes=  (async (req,res)=>{
 })
 
 // Update Notes
+const updateNotes = (async(req,res)=>{
+    let id = req.params.id
+    const notes = await Notes.findOne({where :{id : id}})
+    res.status(200).send(notes)
+})
 
 // Get notes by id
 
@@ -22,5 +27,6 @@ const addNotes=  (async (req,res)=>{
 // delete notes by id
 
 module.exports = {
-    addNotes
+    addNotes,
+    updateNotes,
 }
