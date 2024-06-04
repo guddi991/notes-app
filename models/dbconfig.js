@@ -10,6 +10,17 @@ const sequelize = new Sequelize(
     process.env.DB_PASSWORD,{
         HOST: process.env.HOST,
         dialect:'mysql',
+        operatorsAliases: false,
+        pool: {
+            max: 5,
+            min: 0,
+            acquire: 30000,
+            idle: 10000
+        },
+        dialectOptions: {
+            connectTimeout: 60000 // Increase connection timeout to 60 seconds
+        }
+
     }
 )
 
