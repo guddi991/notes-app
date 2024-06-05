@@ -19,12 +19,8 @@ const NotesRouter = require('./routes/notesRoutes')
 app.use('/api/notes',NotesRouter)
 
 app.use('/',(req,res)=>{
-    console.log("hello")
-    const homePath = path.basename(__dirname,'./frontend/index.html');
+    const homePath = path.join(__dirname, 'frontend', 'index.html');
     res.sendFile(homePath);
-
-    //res.render('./frontend/index.html')
-    // res.status(200).send("Notes App")
 })
 
 app.listen(PORT, ()=>{

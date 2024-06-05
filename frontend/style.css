@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <title>Notes</title>
-</head>
-<style>
-    @import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
 * {
   margin: 0;
   padding: 0;
@@ -119,18 +109,3 @@ h1 {
   border-radius: 5px;
   transition: background-color 0.3s ease-in-out;
 }
-
-</style>
-
-<body>
-    <div class="container">
-        <h1>Sticky Notes App</h1>
-        <div class="sticky-notes">
-          <div class="add-note">+</div>
-          <!-- Add more sticky notes here -->
-        </div>
-      </div>
-
-      <script src="script.js"></script>
-</body>
-</html>
