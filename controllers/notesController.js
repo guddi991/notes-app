@@ -23,16 +23,6 @@ const getNotes = (async(req,res)=>{
 
 // get all notes
 
-// const getallNotes = async (req,res) =>{
-//     let notes = await Notes.findAll({
-//         attribute: [
-//             'title',
-//             'description'
-//         ]
-//     })
-//     res.status(200).send(notes)
-// }
-
 const getAllNotes = async (req, res) => {
     try {
         // Fetch notes from the database
@@ -63,9 +53,16 @@ const updateNotes = (async (req,res)=>{
 
 // delete notes by id
 
+const deleteNotes = (async (req,res)=>{
+    let id = req.params.id;
+    const deletenotes = await Notes.destroy({where: {id:id}})
+    res.status(200).send("Deleted !")
+})
+
 module.exports = {
     addNotes,
     getNotes,
     getAllNotes,
-    updateNotes
+    updateNotes,
+    deleteNotes
 }
